@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>India Boarding Schools - Connect & Discover</title>
+
+    <!-- Google Tag Manager (head snippet) -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NN5BLWF2');</script>
+    <!-- End Google Tag Manager -->
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -43,6 +52,11 @@
     </style>
 </head>
 <body class="flex flex-col min-h-screen">
+
+    <!-- Google Tag Manager (noscript part for body) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5BLWF2"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Custom Alert Message Display -->
     <div id="customAlert" role="alert"></div>
@@ -265,42 +279,11 @@
         });
 
         // --- GA4 and GTM Placeholder ---
-        // IMPORTANT: Replace 'YOUR_GA_MEASUREMENT_ID' and 'YOUR_GTM_ID' with your actual IDs.
-        // These scripts should be placed as early as possible in the <head> for optimal tracking.
-        // For a full GA4/GTM setup, you would typically configure events and variables within
-        // the Google Analytics and Google Tag Manager interfaces, not directly in this HTML.
-
-        // <!-- Google Tag Manager (gtag.js for GA4) -->
-        // <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_MEASUREMENT_ID"></script>
-        // <script>
-        //   window.dataLayer = window.dataLayer || [];
-        //   function gtag(){dataLayer.push(arguments);}
-        //   gtag('js', new Date());
-        //   gtag('config', 'YOUR_GA_MEASUREMENT_ID'); // Your GA4 Measurement ID (e.g., G-XXXXXXXXXX)
-        // </script>
-
-        // <!-- Google Tag Manager (noscript) - for GTM container -->
-        // <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=YOUR_GTM_ID"
-        // height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        // <!-- End Google Tag Manager -->
-
-        // You would typically add the GTM script right after the opening <body> tag.
-        // <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        // new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        // j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        // 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        // })(window,document,'script','dataLayer','YOUR_GTM_ID');</script>
-        // <!-- End Google Tag Manager -->
+        // The gtag() calls below will now be handled via GTM after you configure it.
+        // You generally don't need the direct gtag.js snippet in the HTML if you're using GTM.
 
         // For tracking CTA clicks with GA4/GTM, you would add event listeners like this:
         document.getElementById('addSchoolBtn').addEventListener('click', function() {
-            // Example of sending an event to GA4 via gtag (if gtag script is loaded)
-            if (typeof gtag === 'function') {
-                gtag('event', 'add_school_cta_click', {
-                    'event_category': 'CTA',
-                    'event_label': 'Add Your School Button'
-                });
-            }
             // For GTM, you might push to dataLayer for a custom event trigger
             if (typeof dataLayer !== 'undefined') {
                 dataLayer.push({
@@ -312,12 +295,6 @@
         });
 
         document.getElementById('checkSchoolsBtn').addEventListener('click', function() {
-            if (typeof gtag === 'function') {
-                gtag('event', 'check_schools_cta_click', {
-                    'event_category': 'CTA',
-                    'event_label': 'Check Out Schools Button'
-                });
-            }
             if (typeof dataLayer !== 'undefined') {
                 dataLayer.push({
                     'event': 'cta_click',
@@ -330,12 +307,6 @@
         // Example of tracking form submissions (you'd typically do this after successful server submission)
         document.getElementById('addSchoolForm').addEventListener('submit', function(event) {
             // Assuming form submission is successful
-            if (typeof gtag === 'function') {
-                gtag('event', 'school_form_submit', {
-                    'event_category': 'Form Submission',
-                    'event_label': 'Add School Form'
-                });
-            }
             if (typeof dataLayer !== 'undefined') {
                 dataLayer.push({
                     'event': 'form_submission',
@@ -347,12 +318,6 @@
 
         document.getElementById('checkSchoolsForm').addEventListener('submit', function(event) {
             // Assuming form submission is successful
-            if (typeof gtag === 'function') {
-                gtag('event', 'parent_form_submit', {
-                    'event_category': 'Form Submission',
-                    'event_label': 'Check Schools Form'
-                });
-            }
             if (typeof dataLayer !== 'undefined') {
                 dataLayer.push({
                     'event': 'form_submission',
