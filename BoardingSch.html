@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Boarding Schools - Connect & Discover</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for Inter font and general body */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            color: #374151; /* Darker gray text */
+        }
+        /* Focus styles for inputs */
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Blue focus ring */
+            border-color: #3b82f6; /* Blue border */
+        }
+        /* Custom alert message styles */
+        #customAlert {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+            text-align: center;
+        }
+        #customAlert.show {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Custom Alert Message Display -->
+    <div id="customAlert" role="alert"></div>
+
+    <!-- Header Section -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">India Boarding Schools</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:text-blue-200 transition-colors" onclick="showSection('heroSection'); return false;">Home</a></li>
+                    <li><a href="#about" class="hover:text-blue-200 transition-colors">About</a></li>
+                    <li><a href="#contact" class="hover:text-blue-200 transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow flex flex-col items-center justify-center p-4">
+
+        <!-- Hero Section -->
+        <section id="heroSection" class="bg-white rounded-xl shadow-lg p-8 md:p-12 max-w-3xl w-full text-center mb-8">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-blue-800 mb-4 leading-tight">
+                Discover the Perfect Boarding School in India
+            </h2>
+            <p class="text-lg text-gray-600 mb-8">
+                Connecting schools with aspiring students and parents across India.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <button id="addSchoolBtn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300">
+                    Add Your School
+                </button>
+                <button id="checkSchoolsBtn" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300">
+                    Check Out Schools
+                </button>
+            </div>
+        </section>
+
+        <!-- Add School Section (initially hidden) -->
+        <section id="addSchoolSection" class="bg-white rounded-xl shadow-lg p-6 md:p-8 w-11/12 max-w-lg hidden">
+            <h3 class="text-2xl font-bold text-blue-700 mb-6 text-center">Register Your Boarding School</h3>
+            <form id="addSchoolForm" class="space-y-4">
+                <div>
+                    <label for="schoolName" class="block text-gray-700 text-sm font-semibold mb-1">School Name</label>
+                    <input type="text" id="schoolName" name="schoolName" placeholder="e.g., The Great Indian School" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label for="contactPerson" class="block text-gray-700 text-sm font-semibold mb-1">Contact Person</label>
+                    <input type="text" id="contactPerson" name="contactPerson" placeholder="Full Name" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label for="schoolEmail" class="block text-gray-700 text-sm font-semibold mb-1">Email</label>
+                    <input type="email" id="schoolEmail" name="schoolEmail" placeholder="school@example.com" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label for="schoolPhone" class="block text-gray-700 text-sm font-semibold mb-1">Phone Number</label>
+                    <input type="tel" id="schoolPhone" name="schoolPhone" placeholder="+91 98765 43210" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="schoolCity" class="block text-gray-700 text-sm font-semibold mb-1">City</label>
+                        <input type="text" id="schoolCity" name="schoolCity" placeholder="e.g., Dehradun" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+                    </div>
+                    <div>
+                        <label for="schoolState" class="block text-gray-700 text-sm font-semibold mb-1">State</label>
+                        <input type="text" id="schoolState" name="schoolState" placeholder="e.g., Uttarakhand" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="schoolWebsite" class="block text-gray-700 text-sm font-semibold mb-1">Website (Optional)</label>
+                    <input type="url" id="schoolWebsite" name="schoolWebsite" placeholder="https://www.yourschool.com" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="schoolDescription" class="block text-gray-700 text-sm font-semibold mb-1">Brief Description</label>
+                    <textarea id="schoolDescription" name="schoolDescription" rows="4" placeholder="Tell us about your school's unique features, curriculum, and facilities." class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                    Submit School Details
+                </button>
+            </form>
+        </section>
+
+        <!-- Check Schools Section (initially hidden) -->
+        <section id="checkSchoolsSection" class="bg-white rounded-xl shadow-lg p-6 md:p-8 w-11/12 max-w-lg hidden">
+            <h3 class="text-2xl font-bold text-blue-700 mb-6 text-center">Find Your Ideal Boarding School</h3>
+            <form id="checkSchoolsForm" class="space-y-4">
+                <div>
+                    <label for="parentName" class="block text-gray-700 text-sm font-semibold mb-1">Your Name</label>
+                    <input type="text" id="parentName" name="parentName" placeholder="Full Name" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label for="parentEmail" class="block text-gray-700 text-sm font-semibold mb-1">Your Email</label>
+                    <input type="email" id="parentEmail" name="parentEmail" placeholder="your.email@example.com" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label for="parentPhone" class="block text-gray-700 text-sm font-semibold mb-1">Your Phone Number</label>
+                    <input type="tel" id="parentPhone" name="parentPhone" placeholder="+91 98765 43210" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label for="childGrade" class="block text-gray-700 text-sm font-semibold mb-1">Child's Current Grade/Class</label>
+                    <input type="text" id="childGrade" name="childGrade" placeholder="e.g., 8th Grade" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="prefCity" class="block text-gray-700 text-sm font-semibold mb-1">Preferred City (Optional)</label>
+                        <input type="text" id="prefCity" name="prefCity" placeholder="e.g., Bangalore" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="prefState" class="block text-gray-700 text-sm font-semibold mb-1">Preferred State (Optional)</label>
+                        <input type="text" id="prefState" name="prefState" placeholder="e.g., Karnataka" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500">
+                    </div>
+                </div>
+                <div>
+                    <label for="requirements" class="block text-gray-700 text-sm font-semibold mb-1">Specific Requirements (Optional)</label>
+                    <textarea id="requirements" name="requirements" rows="4" placeholder="e.g., focus on sports, arts, specific curriculum, co-ed/boys/girls school" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                    Find Schools
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2025 India Boarding Schools. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to show a specific section and hide others
+        function showSection(sectionId) {
+            const sections = ['heroSection', 'addSchoolSection', 'checkSchoolsSection'];
+            sections.forEach(id => {
+                const section = document.getElementById(id);
+                if (section) { // Ensure the section exists before trying to manipulate it
+                    if (id === sectionId) {
+                        section.classList.remove('hidden');
+                    } else {
+                        section.classList.add('hidden');
+                    }
+                }
+            });
+            // Scroll to the top of the displayed section for a better user experience
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Function to display a custom alert message
+        function showCustomAlert(message, type = 'success') {
+            const customAlert = document.getElementById('customAlert');
+            customAlert.textContent = message;
+            customAlert.className = 'show'; // Reset classes and add 'show'
+            if (type === 'success') {
+                customAlert.style.backgroundColor = '#4CAF50'; // Green for success
+            } else if (type === 'error') {
+                customAlert.style.backgroundColor = '#f44336'; // Red for error
+            }
+            setTimeout(() => {
+                customAlert.classList.remove('show');
+            }, 3000); // Hide after 3 seconds
+        }
+
+        // Event listeners for showing sections
+        document.getElementById('addSchoolBtn').addEventListener('click', function() {
+            showSection('addSchoolSection');
+        });
+
+        document.getElementById('checkSchoolsBtn').addEventListener('click', function() {
+            showSection('checkSchoolsSection');
+        });
+
+        // Handle form submissions (for demonstration purposes, logs to console)
+        document.getElementById('addSchoolForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            const formData = new FormData(this);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            console.log('Add School Form Data:', data);
+            // In a real application, you would send this data to a server
+            // e.g., using fetch API:
+            // fetch('/api/add-school', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(data)
+            // }).then(response => response.json())
+            //   .then(result => console.log(result))
+            //   .catch(error => console.error('Error:', error));
+
+            showCustomAlert('Thank you for submitting your school details! We will get in touch soon.');
+            this.reset(); // Clear the form
+            showSection('heroSection'); // Go back to hero section after submission
+        });
+
+        document.getElementById('checkSchoolsForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            const formData = new FormData(this);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            console.log('Check Schools Form Data:', data);
+            // In a real application, you would send this data to a server
+            // e.g., using fetch API:
+            // fetch('/api/find-schools', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(data)
+            // }).then(response => response.json())
+            //   .then(result => console.log(result))
+            //   .catch(error => console.error('Error:', error));
+
+            showCustomAlert('Thank you! We will help you find suitable schools shortly.');
+            this.reset(); // Clear the form
+            showSection('heroSection'); // Go back to hero section after submission
+        });
+
+        // --- GA4 and GTM Placeholder ---
+        // IMPORTANT: Replace 'YOUR_GA_MEASUREMENT_ID' and 'YOUR_GTM_ID' with your actual IDs.
+        // These scripts should be placed as early as possible in the <head> for optimal tracking.
+        // For a full GA4/GTM setup, you would typically configure events and variables within
+        // the Google Analytics and Google Tag Manager interfaces, not directly in this HTML.
+
+        // <!-- Google Tag Manager (gtag.js for GA4) -->
+        // <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_MEASUREMENT_ID"></script>
+        // <script>
+        //   window.dataLayer = window.dataLayer || [];
+        //   function gtag(){dataLayer.push(arguments);}
+        //   gtag('js', new Date());
+        //   gtag('config', 'YOUR_GA_MEASUREMENT_ID'); // Your GA4 Measurement ID (e.g., G-XXXXXXXXXX)
+        // </script>
+
+        // <!-- Google Tag Manager (noscript) - for GTM container -->
+        // <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=YOUR_GTM_ID"
+        // height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        // <!-- End Google Tag Manager -->
+
+        // You would typically add the GTM script right after the opening <body> tag.
+        // <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        // new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        // j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        // 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        // })(window,document,'script','dataLayer','YOUR_GTM_ID');</script>
+        // <!-- End Google Tag Manager -->
+
+        // For tracking CTA clicks with GA4/GTM, you would add event listeners like this:
+        document.getElementById('addSchoolBtn').addEventListener('click', function() {
+            // Example of sending an event to GA4 via gtag (if gtag script is loaded)
+            if (typeof gtag === 'function') {
+                gtag('event', 'add_school_cta_click', {
+                    'event_category': 'CTA',
+                    'event_label': 'Add Your School Button'
+                });
+            }
+            // For GTM, you might push to dataLayer for a custom event trigger
+            if (typeof dataLayer !== 'undefined') {
+                dataLayer.push({
+                    'event': 'cta_click',
+                    'cta_name': 'Add Your School',
+                    'form_type': 'school_registration'
+                });
+            }
+        });
+
+        document.getElementById('checkSchoolsBtn').addEventListener('click', function() {
+            if (typeof gtag === 'function') {
+                gtag('event', 'check_schools_cta_click', {
+                    'event_category': 'CTA',
+                    'event_label': 'Check Out Schools Button'
+                });
+            }
+            if (typeof dataLayer !== 'undefined') {
+                dataLayer.push({
+                    'event': 'cta_click',
+                    'cta_name': 'Check Out Schools',
+                    'form_type': 'parent_inquiry'
+                });
+            }
+        });
+
+        // Example of tracking form submissions (you'd typically do this after successful server submission)
+        document.getElementById('addSchoolForm').addEventListener('submit', function(event) {
+            // Assuming form submission is successful
+            if (typeof gtag === 'function') {
+                gtag('event', 'school_form_submit', {
+                    'event_category': 'Form Submission',
+                    'event_label': 'Add School Form'
+                });
+            }
+            if (typeof dataLayer !== 'undefined') {
+                dataLayer.push({
+                    'event': 'form_submission',
+                    'form_name': 'Add School',
+                    'form_status': 'success'
+                });
+            }
+        });
+
+        document.getElementById('checkSchoolsForm').addEventListener('submit', function(event) {
+            // Assuming form submission is successful
+            if (typeof gtag === 'function') {
+                gtag('event', 'parent_form_submit', {
+                    'event_category': 'Form Submission',
+                    'event_label': 'Check Schools Form'
+                });
+            }
+            if (typeof dataLayer !== 'undefined') {
+                dataLayer.push({
+                    'event': 'form_submission',
+                    'form_name': 'Check Schools',
+                    'form_status': 'success'
+                });
+            }
+        });
+    </script>
+</body>
+</html>
