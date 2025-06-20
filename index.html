@@ -1,331 +1,328 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>India Boarding Schools - Connect & Discover</title>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
 
-    <!-- Google Tag Manager (head snippet) -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NN5BLWF2');</script>
-    <!-- End Google Tag Manager -->
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles for Inter font and general body */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Light gray background */
-            color: #374151; /* Darker gray text */
-        }
-        /* Focus styles for inputs */
-        input:focus, textarea:focus, select:focus {
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Blue focus ring */
-            border-color: #3b82f6; /* Blue border */
-        }
-        /* Custom alert message styles */
-        #customAlert {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #4CAF50; /* Green */
-            color: white;
-            padding: 15px 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            z-index: 1001;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-            text-align: center;
-        }
-        #customAlert.show {
-            opacity: 1;
-            visibility: visible;
-        }
-    </style>
-</head>
-<body class="flex flex-col min-h-screen">
-
-    <!-- Google Tag Manager (noscript part for body) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5BLWF2"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <!-- Custom Alert Message Display -->
-    <div id="customAlert" role="alert"></div>
-
-    <!-- Header Section -->
-    <header class="bg-blue-600 text-white p-4 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">India Boarding Schools</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#" class="hover:text-blue-200 transition-colors" onclick="showSection('heroSection'); return false;">Home</a></li>
-                    <li><a href="#about" class="hover:text-blue-200 transition-colors">About</a></li>
-                    <li><a href="#contact" class="hover:text-blue-200 transition-colors">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Content Area -->
-    <main class="flex-grow flex flex-col items-center justify-center p-4">
-
-        <!-- Hero Section -->
-        <section id="heroSection" class="bg-white rounded-xl shadow-lg p-8 md:p-12 max-w-3xl w-full text-center mb-8">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-blue-800 mb-4 leading-tight">
-                Discover the Perfect Boarding School in India
-            </h2>
-            <p class="text-lg text-gray-600 mb-8">
-                Connecting schools with aspiring students and parents across India.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <button id="addSchoolBtn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300">
-                    Add Your School
-                </button>
-                <button id="checkSchoolsBtn" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300">
-                    Check Out Schools
-                </button>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1f0f4] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#131118]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
             </div>
-        </section>
-
-        <!-- Add School Section (initially hidden) -->
-        <section id="addSchoolSection" class="bg-white rounded-xl shadow-lg p-6 md:p-8 w-11/12 max-w-lg hidden">
-            <h3 class="text-2xl font-bold text-blue-700 mb-6 text-center">Register Your Boarding School</h3>
-            <form id="addSchoolForm" class="space-y-4">
-                <div>
-                    <label for="schoolName" class="block text-gray-700 text-sm font-semibold mb-1">School Name</label>
-                    <input type="text" id="schoolName" name="schoolName" placeholder="e.g., The Great Indian School" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+            <h2 class="text-[#131118] text-lg font-bold leading-tight tracking-[-0.015em]">SchoolFinder</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#131118] text-sm font-medium leading-normal" href="#">Browse Schools</a>
+              <a class="text-[#131118] text-sm font-medium leading-normal" href="#">How It Works</a>
+              <a class="text-[#131118] text-sm font-medium leading-normal" href="#">Resources</a>
+              <a class="text-[#131118] text-sm font-medium leading-normal" href="#">Contact</a>
+            </div>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#5619e5] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Chat With Advisor</span>
+            </button>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="@container">
+              <div class="@[480px]:p-4">
+                <div
+                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-start justify-end px-4 pb-10 @[480px]:px-10"
+                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9J1kgrs1AFMW8IHX9dRGrrwhACA2ryKXgIn2Djh7ORYXXor2KWrMRPxY9gRdP3pFwjRm4VQgxbzHmKCW5kXepgwh0lQLa2elKwxWmf6Wzu4c1SwyIPvOJ52QR22JZjy3bLe1nbVlJrM0dJv4BaGnW3oflod8uTFF4Snver7o7IvTcqX5VhEHkT9bPK0wERWK7dRPUo38EbvqyFiag6mBF8Tj-ETuzc2Zq4W4AzMKD27G_EnnR_32TUzgJcY3ayrRfhA0C-dnB9Ds");'
+                >
+                  <div class="flex flex-col gap-2 text-left">
+                    <h1
+                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                    >
+                      Find Your Child’s Perfect Boarding School—Fast
+                    </h1>
+                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                      Compare programs, read reviews, and tour campuses—all in one place.
+                    </h2>
+                  </div>
+                  <div class="flex-wrap gap-3 flex">
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#5619e5] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                    >
+                      <span class="truncate">Compare Schools</span>
+                    </button>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#f1f0f4] text-[#131118] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                    >
+                      <span class="truncate">Download Our Free School Selection Guide</span>
+                    </button>
+                  </div>
                 </div>
-                <div>
-                    <label for="contactPerson" class="block text-gray-700 text-sm font-semibold mb-1">Contact Person</label>
-                    <input type="text" id="contactPerson" name="contactPerson" placeholder="Full Name" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-4 p-4">
+              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 border border-[#dedce5]">
+                <p class="text-[#131118] text-base font-medium leading-normal">Schools Curated</p>
+                <p class="text-[#131118] tracking-light text-2xl font-bold leading-tight">250+</p>
+              </div>
+              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 border border-[#dedce5]">
+                <p class="text-[#131118] text-base font-medium leading-normal">Verified Reviews</p>
+                <p class="text-[#131118] tracking-light text-2xl font-bold leading-tight">1,500+</p>
+              </div>
+              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 border border-[#dedce5]">
+                <p class="text-[#131118] text-base font-medium leading-normal">Virtual Tours Scheduled</p>
+                <p class="text-[#131118] tracking-light text-2xl font-bold leading-tight">750+</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-10 px-4 py-10 @container">
+              <h1
+                class="text-[#131118] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
+              >
+                Key Benefits
+              </h1>
+              <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-0">
+                <div class="flex flex-1 gap-3 rounded-lg border border-[#dedce5] bg-white p-4 flex-col">
+                  <div class="text-[#131118]" data-icon="MagnifyingGlass" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h2 class="text-[#131118] text-base font-bold leading-tight">Personalized Matches</h2>
+                    <p class="text-[#6e6388] text-sm font-normal leading-normal">AI–powered suggestions based on your child’s profile.</p>
+                  </div>
                 </div>
-                <div>
-                    <label for="schoolEmail" class="block text-gray-700 text-sm font-semibold mb-1">Email</label>
-                    <input type="email" id="schoolEmail" name="schoolEmail" placeholder="school@example.com" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+                <div class="flex flex-1 gap-3 rounded-lg border border-[#dedce5] bg-white p-4 flex-col">
+                  <div class="text-[#131118]" data-icon="Users" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h2 class="text-[#131118] text-base font-bold leading-tight">Parent Insights</h2>
+                    <p class="text-[#6e6388] text-sm font-normal leading-normal">Real feedback from families like yours.</p>
+                  </div>
                 </div>
-                <div>
-                    <label for="schoolPhone" class="block text-gray-700 text-sm font-semibold mb-1">Phone Number</label>
-                    <input type="tel" id="schoolPhone" name="schoolPhone" placeholder="+91 98765 43210" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+                <div class="flex flex-1 gap-3 rounded-lg border border-[#dedce5] bg-white p-4 flex-col">
+                  <div class="text-[#131118]" data-icon="VideoCamera" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M251.77,73a8,8,0,0,0-8.21.39L208,97.05V72a16,16,0,0,0-16-16H32A16,16,0,0,0,16,72V184a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V159l35.56,23.71A8,8,0,0,0,248,184a8,8,0,0,0,8-8V80A8,8,0,0,0,251.77,73ZM192,184H32V72H192V184Zm48-22.95-32-21.33V116.28L240,95Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h2 class="text-[#131118] text-base font-bold leading-tight">Live Virtual Tours</h2>
+                    <p class="text-[#6e6388] text-sm font-normal leading-normal">Experience campus life, wherever you are.</p>
+                  </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex flex-1 gap-3 rounded-lg border border-[#dedce5] bg-white p-4 flex-col">
+                  <div class="text-[#131118]" data-icon="UsersThree" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h2 class="text-[#131118] text-base font-bold leading-tight">Expert Consultations</h2>
+                    <p class="text-[#6e6388] text-sm font-normal leading-normal">Speak with our boarding–school advisors.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+              <div class="flex items-stretch p-4 gap-3">
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg bg-white shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJ4dKXxXJhvLB8P1-bvo6m9RnTPY2jxzATprpMIUqQSgP3TrtSXNnvZkqhWbsAM3dpCEjTe-bQUBUN4LMDbK5yjkEd8FAuT1j2soO0UVVVOyiT9HdT9ywsUjFJYRIQLdMGkB222cr6LGpv6AKk9BVOGbzrZVFXN1ixv0yUyhewCm6hSKB7iRAjNqiU5uQcgNmXQ4dp4U2OKzoQgLtBLDc1cm-cBgcKZV6BpK4-N9lAW-wqNclooM-h5fNL0jJazwtRFpiS8KEKMaA");'
+                  ></div>
+                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
                     <div>
-                        <label for="schoolCity" class="block text-gray-700 text-sm font-semibold mb-1">City</label>
-                        <input type="text" id="schoolCity" name="schoolCity" placeholder="e.g., Dehradun" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+                      <p class="text-[#131118] text-base font-medium leading-normal">Ethan, Grade 10</p>
+                      <p class="text-[#6e6388] text-sm font-normal leading-normal">
+                        "SchoolFinder helped us find the perfect boarding school for our son. The virtual tours were incredibly helpful!"
+                      </p>
                     </div>
-                    <div>
-                        <label for="schoolState" class="block text-gray-700 text-sm font-semibold mb-1">State</label>
-                        <input type="text" id="schoolState" name="schoolState" placeholder="e.g., Uttarakhand" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
-                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f1f0f4] text-[#131118] text-sm font-bold leading-normal tracking-[0.015em]"
+                    >
+                      <span class="truncate">Read Full Story</span>
+                    </button>
+                  </div>
                 </div>
-                <div>
-                    <label for="schoolWebsite" class="block text-gray-700 text-sm font-semibold mb-1">Website (Optional)</label>
-                    <input type="url" id="schoolWebsite" name="schoolWebsite" placeholder="https://www.yourschool.com" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500">
+              </div>
+            </div>
+            <h2 class="text-[#131118] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Plans &amp; Pricing</h2>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(228px,1fr))] gap-2.5 px-4 py-3 @3xl:grid-cols-4">
+              <div class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-[#dedce5] bg-white p-6">
+                <div class="flex flex-col gap-1">
+                  <h1 class="text-[#131118] text-base font-bold leading-tight">Basic (Free)</h1>
+                  <span class="text-[#131118] text-4xl font-black leading-tight tracking-[-0.033em]">Free</span>
                 </div>
-                <div>
-                    <label for="schoolDescription" class="block text-gray-700 text-sm font-semibold mb-1">Brief Description</label>
-                    <textarea id="schoolDescription" name="schoolDescription" rows="4" placeholder="Tell us about your school's unique features, curriculum, and facilities." class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300">
-                    Submit School Details
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f1f0f4] text-[#131118] text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Get Started Free</span>
                 </button>
-            </form>
-        </section>
-
-        <!-- Check Schools Section (initially hidden) -->
-        <section id="checkSchoolsSection" class="bg-white rounded-xl shadow-lg p-6 md:p-8 w-11/12 max-w-lg hidden">
-            <h3 class="text-2xl font-bold text-blue-700 mb-6 text-center">Find Your Ideal Boarding School</h3>
-            <form id="checkSchoolsForm" class="space-y-4">
-                <div>
-                    <label for="parentName" class="block text-gray-700 text-sm font-semibold mb-1">Your Name</label>
-                    <input type="text" id="parentName" name="parentName" placeholder="Full Name" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
-                </div>
-                <div>
-                    <label for="parentEmail" class="block text-gray-700 text-sm font-semibold mb-1">Your Email</label>
-                    <input type="email" id="parentEmail" name="parentEmail" placeholder="your.email@example.com" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
-                </div>
-                <div>
-                    <label for="parentPhone" class="block text-gray-700 text-sm font-semibold mb-1">Your Phone Number</label>
-                    <input type="tel" id="parentPhone" name="parentPhone" placeholder="+91 98765 43210" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
-                </div>
-                <div>
-                    <label for="childGrade" class="block text-gray-700 text-sm font-semibold mb-1">Child's Current Grade/Class</label>
-                    <input type="text" id="childGrade" name="childGrade" placeholder="e.g., 8th Grade" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label for="prefCity" class="block text-gray-700 text-sm font-semibold mb-1">Preferred City (Optional)</label>
-                        <input type="text" id="prefCity" name="prefCity" placeholder="e.g., Bangalore" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500">
+                <div class="flex flex-col gap-2">
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-[#131118]">
+                    <div class="text-[#131118]" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
                     </div>
-                    <div>
-                        <label for="prefState" class="block text-gray-700 text-sm font-semibold mb-1">Preferred State (Optional)</label>
-                        <input type="text" id="prefState" name="prefState" placeholder="e.g., Karnataka" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500">
+                    Access to basic school profiles
+                  </div>
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-[#131118]">
+                    <div class="text-[#131118]" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
                     </div>
+                    Limited reviews
+                  </div>
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-[#131118]">
+                    <div class="text-[#131118]" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Virtual tour scheduling (limited)
+                  </div>
                 </div>
-                <div>
-                    <label for="requirements" class="block text-gray-700 text-sm font-semibold mb-1">Specific Requirements (Optional)</label>
-                    <textarea id="requirements" name="requirements" rows="4" placeholder="e.g., focus on sports, arts, specific curriculum, co-ed/boys/girls school" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500"></textarea>
+              </div>
+              <div class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-[#dedce5] bg-white p-6">
+                <div class="flex flex-col gap-1">
+                  <h1 class="text-[#131118] text-base font-bold leading-tight">Premium (₹1,999/year)</h1>
+                  <p class="flex items-baseline gap-1 text-[#131118]">
+                    <span class="text-[#131118] text-4xl font-black leading-tight tracking-[-0.033em]">₹1,999</span>
+                    <span class="text-[#131118] text-base font-bold leading-tight">/year</span>
+                  </p>
                 </div>
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300">
-                    Find Schools
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f1f0f4] text-[#131118] text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Upgrade to Premium</span>
                 </button>
-            </form>
-        </section>
-
-    </main>
-
-    <!-- Footer Section -->
-    <footer class="bg-gray-800 text-white p-4 text-center">
-        <div class="container mx-auto">
-            <p>&copy; 2025 India Boarding Schools. All rights reserved.</p>
+                <div class="flex flex-col gap-2">
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-[#131118]">
+                    <div class="text-[#131118]" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    All Basic features
+                  </div>
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-[#131118]">
+                    <div class="text-[#131118]" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Unlimited reviews
+                  </div>
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-[#131118]">
+                    <div class="text-[#131118]" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Priority virtual tour scheduling
+                  </div>
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-[#131118]">
+                    <div class="text-[#131118]" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Personalized advisor support
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-end overflow-hidden px-5 pb-5">
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-5 bg-[#5619e5] text-white text-base font-bold leading-normal tracking-[0.015em] min-w-0 gap-4 pl-4 pr-6"
+              >
+                <div class="text-white" data-icon="Chats" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M216,80H184V48a16,16,0,0,0-16-16H40A16,16,0,0,0,24,48V176a8,8,0,0,0,13,6.22L72,154V184a16,16,0,0,0,16,16h93.59L219,230.22a8,8,0,0,0,5,1.78,8,8,0,0,0,8-8V96A16,16,0,0,0,216,80ZM66.55,137.78,40,159.25V48H168v88H71.58A8,8,0,0,0,66.55,137.78ZM216,207.25l-26.55-21.47a8,8,0,0,0-5-1.78H88V152h80a16,16,0,0,0,16-16V96h32Z"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="truncate">Live Chat</span>
+              </button>
+            </div>
+          </div>
         </div>
-    </footer>
-
-    <script>
-        // Function to show a specific section and hide others
-        function showSection(sectionId) {
-            const sections = ['heroSection', 'addSchoolSection', 'checkSchoolsSection'];
-            sections.forEach(id => {
-                const section = document.getElementById(id);
-                if (section) { // Ensure the section exists before trying to manipulate it
-                    if (id === sectionId) {
-                        section.classList.remove('hidden');
-                    } else {
-                        section.classList.add('hidden');
-                    }
-                }
-            });
-            // Scroll to the top of the displayed section for a better user experience
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        // Function to display a custom alert message
-        function showCustomAlert(message, type = 'success') {
-            const customAlert = document.getElementById('customAlert');
-            customAlert.textContent = message;
-            customAlert.className = 'show'; // Reset classes and add 'show'
-            if (type === 'success') {
-                customAlert.style.backgroundColor = '#4CAF50'; // Green for success
-            } else if (type === 'error') {
-                customAlert.style.backgroundColor = '#f44336'; // Red for error
-            }
-            setTimeout(() => {
-                customAlert.classList.remove('show');
-            }, 3000); // Hide after 3 seconds
-        }
-
-        // Event listeners for showing sections
-        document.getElementById('addSchoolBtn').addEventListener('click', function() {
-            showSection('addSchoolSection');
-        });
-
-        document.getElementById('checkSchoolsBtn').addEventListener('click', function() {
-            showSection('checkSchoolsSection');
-        });
-
-        // Handle form submissions (for demonstration purposes, logs to console)
-        document.getElementById('addSchoolForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-            const formData = new FormData(this);
-            const data = {};
-            for (let [key, value] of formData.entries()) {
-                data[key] = value;
-            }
-            console.log('Add School Form Data:', data);
-            // In a real application, you would send this data to a server
-            // e.g., using fetch API:
-            // fetch('/api/add-school', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(data)
-            // }).then(response => response.json())
-            //   .then(result => console.log(result))
-            //   .catch(error => console.error('Error:', error));
-
-            showCustomAlert('Thank you for submitting your school details! We will get in touch soon.');
-            this.reset(); // Clear the form
-            showSection('heroSection'); // Go back to hero section after submission
-        });
-
-        document.getElementById('checkSchoolsForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-            const formData = new FormData(this);
-            const data = {};
-            for (let [key, value] of formData.entries()) {
-                data[key] = value;
-            }
-            console.log('Check Schools Form Data:', data);
-            // In a real application, you would send this data to a server
-            // e.g., using fetch API:
-            // fetch('/api/find-schools', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(data)
-            // }).then(response => response.json())
-            //   .then(result => console.log(result))
-            //   .catch(error => console.error('Error:', error));
-
-            showCustomAlert('Thank you! We will help you find suitable schools shortly.');
-            this.reset(); // Clear the form
-            showSection('heroSection'); // Go back to hero section after submission
-        });
-
-        // --- GA4 and GTM Placeholder ---
-        // The gtag() calls below will now be handled via GTM after you configure it.
-        // You generally don't need the direct gtag.js snippet in the HTML if you're using GTM.
-
-        // For tracking CTA clicks with GA4/GTM, you would add event listeners like this:
-        document.getElementById('addSchoolBtn').addEventListener('click', function() {
-            // For GTM, you might push to dataLayer for a custom event trigger
-            if (typeof dataLayer !== 'undefined') {
-                dataLayer.push({
-                    'event': 'cta_click',
-                    'cta_name': 'Add Your School',
-                    'form_type': 'school_registration'
-                });
-            }
-        });
-
-        document.getElementById('checkSchoolsBtn').addEventListener('click', function() {
-            if (typeof dataLayer !== 'undefined') {
-                dataLayer.push({
-                    'event': 'cta_click',
-                    'cta_name': 'Check Out Schools',
-                    'form_type': 'parent_inquiry'
-                });
-            }
-        });
-
-        // Example of tracking form submissions (you'd typically do this after successful server submission)
-        document.getElementById('addSchoolForm').addEventListener('submit', function(event) {
-            // Assuming form submission is successful
-            if (typeof dataLayer !== 'undefined') {
-                dataLayer.push({
-                    'event': 'form_submission',
-                    'form_name': 'Add School',
-                    'form_status': 'success'
-                });
-            }
-        });
-
-        document.getElementById('checkSchoolsForm').addEventListener('submit', function(event) {
-            // Assuming form submission is successful
-            if (typeof dataLayer !== 'undefined') {
-                dataLayer.push({
-                    'event': 'form_submission',
-                    'form_name': 'Check Schools',
-                    'form_status': 'success'
-                });
-            }
-        });
-    </script>
-</body>
+        <footer class="flex justify-center">
+          <div class="flex max-w-[960px] flex-1 flex-col">
+            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                <a class="text-[#6e6388] text-base font-normal leading-normal min-w-40" href="#">About Us</a>
+                <a class="text-[#6e6388] text-base font-normal leading-normal min-w-40" href="#">Careers</a>
+                <a class="text-[#6e6388] text-base font-normal leading-normal min-w-40" href="#">Blog</a>
+                <a class="text-[#6e6388] text-base font-normal leading-normal min-w-40" href="#">Help Center</a>
+                <a class="text-[#6e6388] text-base font-normal leading-normal min-w-40" href="#">FAQs</a>
+                <a class="text-[#6e6388] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
+              </div>
+              <div class="flex flex-wrap justify-center gap-4">
+                <a href="#">
+                  <div class="text-[#6e6388]" data-icon="FacebookLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="text-[#6e6388]" data-icon="InstagramLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="text-[#6e6388]" data-icon="LinkedinLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <p class="text-[#6e6388] text-base font-normal leading-normal">© 2024 SchoolFinder. Empowering Smart School Choices.</p>
+            </footer>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>
+
